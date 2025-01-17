@@ -1,0 +1,6 @@
+all: bwtencode bwtsearch
+
+bwtencode: bwtencode.c bwtfile.c
+	gcc -O3 bwtencode.c bwtfile.c -o bwtencode
+bwtsearch: bwtsearch.c bwtfile.c
+	gcc bwtsearch.c bwtfile.c -o bwtsearch
